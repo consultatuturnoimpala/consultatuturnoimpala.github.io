@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Consulta de Turno · Técnicos Operadores</title>
+  <style>
+    :root {
+      --primary-purple: #903F98;
+      --teal-main: #009991;
+      --dark-navy: #001E33;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-result: #f1f5f9;
+      --text-muted: #64748b;
+      --error-bg: #fef2f2;
+      --error-text: #dc2626;
+      --border-color: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      background-image: radial-gradient(circle at top right, rgba(0, 153, 145, 0.06), transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(144, 63, 152, 0.06), transparent 50%);
+      color: var(--dark-navy);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 30, 51, 0.08), 0 8px 10px -6px rgba(0, 30, 51, 0.04);
+      padding: 32px 28px;
+      max-width: 460px;
+      width: 100%;
+      border: 1px solid #e2e8f0;
+      border-top: 5px solid var(--primary-purple);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 16px;
+    }
+
+    .header-text h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .header-text p {
+      margin: 4px 0 0 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .top-right-image {
+      max-height: 50px;
+      max-width: 120px;
+      object-fit: contain;
+    }
+
+    .fecha-chip {
+      display: inline-block;
+      background: rgba(0, 153, 145, 0.1);
+      color: var(--teal-main);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-align: center;
+      color: var(--dark-navy);
+      background-color: #fff;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--teal-main);
+      box-shadow: 0 0 0 4px rgba(0, 153, 145, 0.12);
+    }
+
+    .hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .result-box {
+      margin-top: 24px;
+      display: none;
+    }
+
+    .persona {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary-purple);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .persona-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
+    .asignacion {
+      padding: 18px;
+      border-radius: 12px;
+      background-color: var(--bg-result);
+      border-left: 5px solid var(--teal-main);
+      margin-bottom: 12px;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+
+    .asignacion:last-child { margin-bottom: 0; }
+
+    .turno-linea {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .turno-nombre {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary-purple);
+    }
+
+    .turno-horario {
+      font-size: 0.95rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .detail-item { margin-bottom: 10px; }
+    .detail-item:last-child { margin-bottom: 0; }
+
+    .result-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .result-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .aviso {
+      padding: 18px;
+      border-radius: 12px;
+      background-color: var(--error-bg);
+      border-left: 5px solid var(--error-text);
+      color: var(--error-text);
+      font-size: 0.95rem;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .cargando {
+      padding: 18px;
+      border-radius: 12px;
+      background-color: var(--bg-result);
+      border-left: 5px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .card-footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      border-top: 1px solid #f1f5f9;
+      padding-top: 14px;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header-container">
+      <div class="header-text">
+        <h2>Consulta de Turno</h2>
+        <p>Distribución de Técnicos Operadores</p>
+      </div>
+      <img src="Impala.png" alt="Impala Terminals" class="top-right-image" onerror="this.style.display='none'">
+    </div>
+
+    <div class="fecha-chip" id="fechaChip">Cargando programación…</div>
+
+    <div class="input-group">
+      <label for="searchInput">Ingrese su DNI (8 dígitos)</label>
+      <input type="text" id="searchInput" inputmode="numeric" autocomplete="off"
+             maxlength="8" placeholder="00000000" aria-describedby="hint">
+      <div class="hint" id="hint">La consulta se resuelve en este equipo. Su DNI no se envía a ningún servidor.</div>
+    </div>
+
+    <div id="result" class="result-box" aria-live="polite"></div>
+
+    <div class="card-footer">
+      Sistema de Control Operativo<br>
+      <span id="footerMeta"></span>
+    </div>
+  </div>
+
+  <script>
+    // Debe coincidir con las constantes de generar_data.py
+    const SAL = "impala-turnos-v1";
+    const ITERACIONES = 150000;
+    const LARGO_HUELLA = 32;
+
+    let dataset = null;
+    let cargaError = false;
+
+    fetch('data.json?v=' + Date.now())
+      .then(r => r.json())
+      .then(data => {
+        dataset = data;
+        const m = data.meta || {};
+        document.getElementById('fechaChip').textContent =
+          'Programación del ' + (m.fecha || '—') + (m.dia ? ' · ' + m.dia : '');
+        document.getElementById('footerMeta').textContent =
+          'Actualizado ' + (m.generado || '—') + ' · ' + (m.operadores || 0) + ' operadores programados';
+      })
+      .catch(err => {
+        cargaError = true;
+        console.error('No se pudo cargar data.json:', err);
+        document.getElementById('fechaChip').textContent = 'No se pudo cargar la programación';
+      });
+
+    async function huella(dni) {
+      const enc = new TextEncoder();
+      const clave = await crypto.subtle.importKey(
+        'raw', enc.encode(dni), 'PBKDF2', false, ['deriveBits']
+      );
+      const bits = await crypto.subtle.deriveBits(
+        { name: 'PBKDF2', salt: enc.encode(SAL), iterations: ITERACIONES, hash: 'SHA-256' },
+        clave, 256
+      );
+      return Array.from(new Uint8Array(bits))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('')
+        .slice(0, LARGO_HUELLA);
+    }
+
+    function esc(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g,
+        c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function fila(titulo, valor) {
+      if (!valor) return '';
+      return '<div class="detail-item"><div class="result-title">' + titulo +
+             '</div><div class="result-value">' + esc(valor) + '</div></div>';
+    }
+
+    function pintar(html) {
+      const caja = document.getElementById('result');
+      caja.innerHTML = html;
+      caja.style.display = html ? 'block' : 'none';
+    }
+
+    const input = document.getElementById('searchInput');
+    let consultaActiva = 0;
+
+    input.addEventListener('input', async () => {
+      input.value = input.value.replace(/\D/g, '');
+      const dni = input.value;
+
+      if (dni.length < 8) { pintar(''); return; }
+
+      if (cargaError || !dataset) {
+        pintar('<div class="aviso">La programación aún no está disponible. ' +
+               'Recargue la página en unos segundos.</div>');
+        return;
+      }
+
+      const id = ++consultaActiva;
+      pintar('<div class="cargando">Buscando…</div>');
+
+      const h = await huella(dni);
+      if (id !== consultaActiva) return; // llegó una consulta más nueva
+
+      const persona = dataset.operadores.find(o => o.h === h);
+
+      if (!persona) {
+        pintar('<div class="aviso">No figura una asignación para este DNI en la programación del ' +
+               esc((dataset.meta || {}).fecha || 'día') +
+               '. Verifique el número o consulte con su Jefe de Guardia.</div>');
+        return;
+      }
+
+      const n = persona.a.length;
+      let html = '<div class="persona">' + esc(persona.n) + '</div>' +
+                 '<div class="persona-sub">' +
+                 (n === 1 ? '1 asignación programada' : n + ' asignaciones programadas') +
+                 '</div>';
+
+      persona.a.forEach(a => {
+        html += '<div class="asignacion">' +
+          '<div class="turno-linea">' +
+            '<span class="turno-nombre">' + esc(a.tu) + '</span>' +
+            '<span class="turno-horario">' + esc(a.ho) + '</span>' +
+          '</div>' +
+          fila('Equipo asignado', a.eq + (a.em ? ' · ' + a.em : '')) +
+          fila('Operación asignada', a.op) +
+          fila('Zona', a.zo) +
+          fila('Referencia', a.re) +
+          fila('Jefe de guardia', a.jg) +
+        '</div>';
+      });
+
+      pintar(html);
+    });
+  </script>
+</body>
+</html>
