@@ -2,13 +2,13 @@
  "meta": {
   "fecha": "02/09/2026",
   "dia": "MIÉRCOLES",
-  "generado": "02/09/2026 12:27",
+  "generado": "02/09/2026 13:02",
   "operadores": 57,
   "asignaciones": 58
  },
  "operadores": [
   {
-   "h": "956820752011caca36e5cc2920a3e4ca",
+   "h": "b48abae2dd163c086f014ae44b8f5275",
    "n": "PERDOMO AGUILAR EDUARDO FELIPE",
    "a": [
     {
@@ -310,7 +310,7 @@
    "n": "ATAU CHAGUA MARCO ANTONIO",
    "a": [
     {
-     "eq": "L150H 06",
+     "eq": "L150H 06- A",
      "tu": "TURNO DÍA · 12H",
      "ho": "07:00 - 19:00",
      "op": "REPESO// ZONA DE MEZCLA 1",
@@ -614,7 +614,7 @@
    "n": "NAUPARI COLAN ENRIQUE GIAN PIERRE",
    "a": [
     {
-     "eq": "L150H 113",
+     "eq": "L150H 13- A",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
      "op": "M&D MEZCLA DE PB // ZONA DE ENCAPSULADO",
@@ -918,7 +918,7 @@
    "n": "WAJAI PEREZ MARCOS SAMUEL",
    "a": [
     {
-     "eq": "L150H 113",
+     "eq": "L150H 13- A",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
      "op": "M&D MEZCLA DE PB // ZONA DE ENCAPSULADO",
