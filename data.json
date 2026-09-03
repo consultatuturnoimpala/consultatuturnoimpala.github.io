@@ -1,10 +1,10 @@
 {
  "meta": {
-  "fecha": "02/09/2026",
-  "dia": "MIÉRCOLES",
-  "generado": "02/09/2026 14:47",
-  "operadores": 55,
-  "asignaciones": 58
+  "fecha": "03/09/2026",
+  "dia": "JUEVES",
+  "generado": "03/09/2026 06:21",
+  "operadores": 56,
+  "asignaciones": 60
  },
  "operadores": [
   {
@@ -12,13 +12,13 @@
    "n": "PERDOMO AGUILAR EDUARDO FELIPE",
    "a": [
     {
-     "eq": "L220H 206",
+     "eq": "246D 02",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
-     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
-     "zo": "",
-     "re": "◆ CU 58",
-     "em": "IMPALA",
+     "op": "RECEPCION - PB",
+     "zo": "ENCAPSULADO",
+     "re": "",
+     "em": "",
      "jg": "T2 JIMMY PERALTA"
     }
    ]
@@ -28,11 +28,11 @@
    "n": "FERNANDEZ LOPEZ CARLOS FREDDY",
    "a": [
     {
-     "eq": "246D 19",
+     "eq": "246D 20",
      "tu": "TURNO 3 · NOCHE",
      "ho": "19:00 - 07:00",
-     "op": "M&D CONSOLIDADO GAMBETA",
-     "zo": "",
+     "op": "M&D CONSOLIDADO PLOMO",
+     "zo": "ENCAPSULADO",
      "re": "",
      "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
@@ -60,23 +60,13 @@
    "n": "RAMOS ZAMUDIO SAUL FERNANDO",
    "a": [
     {
-     "eq": "L150H 112",
+     "eq": "L220H 205",
      "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 19:00",
-     "op": "RECEPCIÓN - IMPORTACION // ZONA SM",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T2 JIMMY PERALTA"
-    },
-    {
-     "eq": "L150H 112",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "19:00 - 23:00",
-     "op": "SMALL MINNERS // ZONA SM",
-     "zo": "",
-     "re": "",
-     "em": "",
+     "ho": "15:00 - 23:30",
+     "op": "M&D MEZCLA DE ZINC TRAF // ZONA MEZCLA ZINC",
+     "zo": "MEZCLA AU",
+     "re": "◆ ZN 53",
+     "em": "IMPALA",
      "jg": "T2 JIMMY PERALTA"
     }
    ]
@@ -86,13 +76,13 @@
    "n": "ALVARADO TORRES ERWIN GUILLERMO",
    "a": [
     {
-     "eq": "L150H 115",
+     "eq": "246D 23",
      "tu": "TURNO 3 · NOCHE",
-     "ho": "19:00 - 07:00",
-     "op": "MARIATEGUI - CONSOLIDADO",
-     "zo": "◆ MARIÁTEGUI",
+     "ho": "23:00 - 07:00",
+     "op": "RECEPCIÓN - CAMIONES//CHARLY3",
+     "zo": "",
      "re": "",
-     "em": "IMPALA",
+     "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -102,10 +92,26 @@
    "n": "ROJAS SOLANO ZOCIMO DIONICIO",
    "a": [
     {
-     "eq": "M40 24",
+     "eq": "M40 23",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "BARRIDO",
+     "op": "BARRIDO // ZONA BALANZA ATALAYA",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T1 DANIEL GUIZADO"
+    }
+   ]
+  },
+  {
+   "h": "fb05c290180bd728a299c6a224f709e6",
+   "n": "TEJEDA VENTURA LUCIO MARCOS",
+   "a": [
+    {
+     "eq": "L150H 112",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "07:00 - 15:30",
+     "op": "RECEPCION - PB//ENCAPSULADO",
      "zo": "",
      "re": "",
      "em": "",
@@ -118,11 +124,11 @@
    "n": "BACA MENESES PABLO",
    "a": [
     {
-     "eq": "246D 02",
+     "eq": "246D 20",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "7:00 - 15:30",
-     "op": "RECEPCION - PB",
-     "zo": "",
+     "op": "M&D CONSOLIDADO PLOMO",
+     "zo": "ENCAPSULADO",
      "re": "",
      "em": "",
      "jg": "T1 DANIEL GUIZADO"
@@ -134,13 +140,13 @@
    "n": "NORIEGA VELIZ CESAR",
    "a": [
     {
-     "eq": "CISTERNA 01",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "REGADO DE RUMAS",
+     "eq": "L150H 114",
+     "tu": "TURNO DÍA · 12H",
+     "ho": "07:00 - 19:00",
+     "op": "M&D CONSOLIDADO PLOMO",
      "zo": "",
      "re": "",
-     "em": "",
+     "em": "IMPALA",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -153,7 +159,7 @@
      "eq": "246D 23",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
-     "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
+     "op": "RECEPCIÓN - CAMIONES//CHARLY3",
      "zo": "",
      "re": "",
      "em": "",
@@ -166,10 +172,20 @@
    "n": "PEREZ CERRO JULIAN",
    "a": [
     {
-     "eq": "246D 21",
+     "eq": "L150H 110",
      "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 23:00",
-     "op": "MEZCLA // ZONA DE MEZCLA 1",
+     "ho": "15:00 - 19:00",
+     "op": "RECEPCIÓN - IMPORTACION// SM",
+     "zo": "COLISEO",
+     "re": "",
+     "em": "IMPALA",
+     "jg": "T2 JIMMY PERALTA"
+    },
+    {
+     "eq": "L150H 110",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "19:00 - 23:00",
+     "op": "SMALL MINNERS // ZONA SM",
      "zo": "",
      "re": "",
      "em": "",
@@ -180,86 +196,6 @@
   {
    "h": "b1619e8634406542d25ed1e87a3e4322",
    "n": "SALCEDO URBINA JOSE MANUEL",
-   "a": [
-    {
-     "eq": "M40 23",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "BARRIDO",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "69b3661b10dd1606dabcd52835f2e023",
-   "n": "QUISPE CACERES EDGAR",
-   "a": [
-    {
-     "eq": "246D 23",
-     "tu": "TURNO 3 · NOCHE",
-     "ho": "23:00 - 07:00",
-     "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T3 LEONARDO ZAVALETA"
-    }
-   ]
-  },
-  {
-   "h": "5e47577befdf8c0580f5d26eff514220",
-   "n": "BAZALAR FERNANDEZ EDWARD MIGUEL",
-   "a": [
-    {
-     "eq": "MEZCLADORA 60",
-     "tu": "TURNO DÍA · 12H",
-     "ho": "07:00 - 19:00",
-     "op": "M&D MEZCLA DE COBRE",
-     "zo": "",
-     "re": "◆ AU 58",
-     "em": "",
-     "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "7b41f3c77fe44d77f91e50ce18cc0c13",
-   "n": "BARBADILLO VALIENTE NESTOR MIGUEL",
-   "a": [
-    {
-     "eq": "246D 20",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "7:00 - 15:30",
-     "op": "M&D CONSOLIDADO PLOMO",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "2e68bc115326ca1dd39d90363585f2f8",
-   "n": "JORGES CORDOVA EDWIN MARTIN",
-   "a": [
-    {
-     "eq": "246D 02",
-     "tu": "TURNO 3 · NOCHE",
-     "ho": "23:00 - 07:00",
-     "op": "RECEPCION - PB // ENCAPSULADO",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T3 LEONARDO ZAVALETA"
-    }
-   ]
-  },
-  {
-   "h": "6519f6fb038edecd97d5fa0f8fb50cee",
-   "n": "MEZA ACOSTA JHONATAN POOL",
    "a": [
     {
      "eq": "246D 21",
@@ -274,16 +210,90 @@
    ]
   },
   {
+   "h": "69b3661b10dd1606dabcd52835f2e023",
+   "n": "QUISPE CACERES EDGAR",
+   "a": [
+    {
+     "eq": "246D 21",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "19:00 - 07:00",
+     "op": "MARIATEGUI - CONSOLIDADO",
+     "zo": "◆ MARIÁTEGUI",
+     "re": "",
+     "em": "",
+     "jg": "T3 LEONARDO ZAVALETA"
+    }
+   ]
+  },
+  {
+   "h": "5e47577befdf8c0580f5d26eff514220",
+   "n": "BAZALAR FERNANDEZ EDWARD MIGUEL",
+   "a": [
+    {
+     "eq": "L150H 110",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "07:00 - 15:30",
+     "op": "RECEPCIÓN - IMPORTACION// SM",
+     "zo": "COLISEO",
+     "re": "",
+     "em": "IMPALA",
+     "jg": "T1 DANIEL GUIZADO"
+    },
+    {
+     "eq": "246D 19",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "(sin relevo 15:00)",
+     "op": "M&D CONSOLIDADO GAMBETA",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T2 JIMMY PERALTA"
+    }
+   ]
+  },
+  {
+   "h": "7b41f3c77fe44d77f91e50ce18cc0c13",
+   "n": "BARBADILLO VALIENTE NESTOR MIGUEL",
+   "a": [
+    {
+     "eq": "L150H 113",
+     "tu": "TURNO DÍA · 12H",
+     "ho": "07:00 - 19:00",
+     "op": "M&D CONSOLIDADO GAMBETA",
+     "zo": "CROSSDOCK. MILPO 2",
+     "re": "",
+     "em": "IMPALA",
+     "jg": "T1 DANIEL GUIZADO"
+    }
+   ]
+  },
+  {
+   "h": "2e68bc115326ca1dd39d90363585f2f8",
+   "n": "JORGES CORDOVA EDWIN MARTIN",
+   "a": [
+    {
+     "eq": "M40 24",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "23:00 - 07:00",
+     "op": "BARRIDO // ZONA BALANZA ATALAYA",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T3 LEONARDO ZAVALETA"
+    }
+   ]
+  },
+  {
    "h": "445d8df135d9d95e69881ee5d72fba63",
    "n": "ARIAS CISNERO FELIX DANIEL",
    "a": [
     {
-     "eq": "MEZCLADORA 60",
+     "eq": "246D 19",
      "tu": "TURNO 3 · NOCHE",
      "ho": "19:00 - 07:00",
-     "op": "M&D MEZCLA // ZONA DE MEZCLA 1",
+     "op": "M&D CONSOLIDADO GAMBETA",
      "zo": "",
-     "re": "◆ AU 57",
+     "re": "",
      "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
@@ -310,13 +320,13 @@
    "n": "ATAU CHAGUA MARCO ANTONIO",
    "a": [
     {
-     "eq": "L150H 12",
-     "tu": "TURNO DÍA · 12H",
-     "ho": "07:00 - 19:00",
-     "op": "REPESO",
-     "zo": "",
-     "re": "◆ CU 56",
-     "em": "PGF",
+     "eq": "L220H 204",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "07:00 - 15:30",
+     "op": "M&D MEZCLA DE PB// ENCAPSULADO",
+     "zo": "MEZCLA AU",
+     "re": "◆ PB 90",
+     "em": "IMPALA",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -329,9 +339,9 @@
      "eq": "L220H 205",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "M&D MEZCLA DE CU. TRAF",
-     "zo": "",
-     "re": "◆ CU 56",
+     "op": "M&D MEZCLA DE ZINC TRAF // ZONA MEZCLA ZINC",
+     "zo": "MEZCLA AU",
+     "re": "◆ ZN 53",
      "em": "IMPALA",
      "jg": "T1 DANIEL GUIZADO"
     }
@@ -342,13 +352,13 @@
    "n": "GOICOCHEA RAMIREZ JUAN CARLOS",
    "a": [
     {
-     "eq": "L220H 206",
+     "eq": "246D 19",
      "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "M&D MEZCLA DE ORO TRAF",
+     "ho": "07:00 - 19:00",
+     "op": "M&D CONSOLIDADO GAMBETA",
      "zo": "",
-     "re": "◆ CU 58",
-     "em": "IMPALA",
+     "re": "",
+     "em": "",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -358,13 +368,13 @@
    "n": "LOPEZ RAMIREZ HENRY JACSMANY",
    "a": [
     {
-     "eq": "L220H 204",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "M&D MEZCLA DE CU. TRAF",
-     "zo": "",
-     "re": "◆ CU 56",
-     "em": "IMPALA",
+     "eq": "MEZCLADORA 60",
+     "tu": "TURNO DÍA · 12H",
+     "ho": "07:00 - 19:00",
+     "op": "M&D MEZCLA DE COBRE",
+     "zo": "MEZCLA AU",
+     "re": "◆ AU 58",
+     "em": "",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -386,18 +396,18 @@
    ]
   },
   {
-   "h": "5614d5b5e2977a7874c9fbc4f2cda23d",
-   "n": "DE LA CRUZ CANCHARI VICTOR HUGO",
+   "h": "edb86ac6131d4c47a18c7a6c9d70b567",
+   "n": "COLQUEHUANCA ALMANZA GUIDO",
    "a": [
     {
-     "eq": "L220H 207",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "M&D MEZCLA DE ORO TRAF",
-     "zo": "",
+     "eq": "L220H 206",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "23:00 - 07:00",
+     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
+     "zo": "MEZCLA ZINC",
      "re": "◆ CU 58",
-     "em": "",
-     "jg": "T1 DANIEL GUIZADO"
+     "em": "IMPALA",
+     "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
   },
@@ -406,13 +416,13 @@
    "n": "PALACIOS PAREDES JOSE LUIS",
    "a": [
     {
-     "eq": "L220H 207",
+     "eq": "L220H 206",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
      "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
-     "zo": "",
+     "zo": "MEZCLA ZINC",
      "re": "◆ CU 58",
-     "em": "",
+     "em": "IMPALA",
      "jg": "T2 JIMMY PERALTA"
     }
    ]
@@ -422,13 +432,13 @@
    "n": "GUEVARA HEREDIA JUAN MANUEL",
    "a": [
     {
-     "eq": "L150H 114",
-     "tu": "TURNO DÍA · 12H",
-     "ho": "07:00 - 19:00",
-     "op": "M&D CONSOLIDADO PLOMO",
+     "eq": "CISTERNA 01",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "07:00 - 15:30",
+     "op": "REGADO DE RUMAS // ZONA DE MEZCLA 1",
      "zo": "",
      "re": "",
-     "em": "IMPALA",
+     "em": "",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -438,10 +448,26 @@
    "n": "BERRU HILARIO LARRI",
    "a": [
     {
-     "eq": "M40 17",
+     "eq": "M40 23",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
      "op": "BARRIDO // ZONA BALANZA ATALAYA",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T2 JIMMY PERALTA"
+    }
+   ]
+  },
+  {
+   "h": "945f3d25eab2c41d9ef7e782d59f7a0e",
+   "n": "CASTELLANOS TRUCIOS NOEL NICOLAS",
+   "a": [
+    {
+     "eq": "L150H 112",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "15:00 - 23:30",
+     "op": "RECEPCION - PB//ENCAPSULADO",
      "zo": "",
      "re": "",
      "em": "",
@@ -458,7 +484,7 @@
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
      "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
-     "zo": "",
+     "zo": "COLISEO",
      "re": "◆ AU 57",
      "em": "IMPALA",
      "jg": "T3 LEONARDO ZAVALETA"
@@ -466,16 +492,16 @@
    ]
   },
   {
-   "h": "8db20a1f82f67cfc6708a9aa1d5d31e0",
-   "n": "VILLA ROQUE MINORO MIRLO",
+   "h": "680269b388b77f4773e70434fbb66946",
+   "n": "BRITO TAFUR NIKI ROLY",
    "a": [
     {
-     "eq": "246D 20",
+     "eq": "MEZCLADORA 60",
      "tu": "TURNO 3 · NOCHE",
      "ho": "19:00 - 07:00",
-     "op": "M&D CONSOLIDADO PLOMO",
-     "zo": "",
-     "re": "",
+     "op": "M&D MEZCLA DE ORO",
+     "zo": "MEZCLA AU",
+     "re": "◆ AU 57",
      "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
@@ -486,30 +512,14 @@
    "n": "TOMAILLA RAMIREZ JOSE LUIS",
    "a": [
     {
-     "eq": "246D 23",
+     "eq": "L150H 108",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "RECEPCIÓN - CAMIONES",
-     "zo": "",
+     "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
+     "zo": "COLISEO",
      "re": "",
-     "em": "",
+     "em": "IMPALA",
      "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "c51ee24536ddfda668a582c74f5b7514",
-   "n": "HIDALGO RENGIFO LLERVER",
-   "a": [
-    {
-     "eq": "246D 02",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 23:30",
-     "op": "RECEPCION - PB // ENCAPSULADO",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T2 JIMMY PERALTA"
     }
    ]
   },
@@ -518,13 +528,29 @@
    "n": "SUAREZ TUPIA JUAN DANIEL",
    "a": [
     {
-     "eq": "L220H 204",
+     "eq": "L150H 111",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
-     "op": "M&D MEZCLA DE PB",
+     "op": "MARIATEGUI - TRASLADO EXTERNO",
      "zo": "",
-     "re": "◆ CU 56",
-     "em": "IMPALA",
+     "re": "",
+     "em": "",
+     "jg": "T3 LEONARDO ZAVALETA"
+    }
+   ]
+  },
+  {
+   "h": "7a3072c464a81eec1e23e9cfe2bb9545",
+   "n": "CULQUI TRUJILLO OSWALDO JUNIOR",
+   "a": [
+    {
+     "eq": "L150H 112",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "23:00 - 07:00",
+     "op": "RECEPCION - PB//ENCAPSULADO",
+     "zo": "",
+     "re": "",
+     "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -537,10 +563,10 @@
      "eq": "L150H 110",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
-     "op": "RECEPCIÓN - COLISEO",
+     "op": "SMALL MINNERS // ZONA SM",
      "zo": "",
      "re": "",
-     "em": "IMPALA",
+     "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -550,12 +576,12 @@
    "n": "RAMIREZ CRUZ JUAN CARLOS",
    "a": [
     {
-     "eq": "L150H 108",
+     "eq": "L220H 204",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
-     "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
-     "zo": "",
-     "re": "",
+     "op": "M&D MEZCLA DE PB// ENCAPSULADO",
+     "zo": "MEZCLA AU",
+     "re": "◆ PB 90",
      "em": "IMPALA",
      "jg": "T2 JIMMY PERALTA"
     }
@@ -566,14 +592,30 @@
    "n": "RAMIREZ JUAREZ EDILBERTO",
    "a": [
     {
-     "eq": "L150H 111",
+     "eq": "L150H 108",
      "tu": "TURNO 2 · TARDE",
      "ho": "15:00 - 23:30",
-     "op": "RECEPCION - PB// ZONA ENCAPSULADO",
+     "op": "RECEPCIÓN - CAMIONES// CHARLY 3",
+     "zo": "COLISEO",
+     "re": "",
+     "em": "IMPALA",
+     "jg": "T2 JIMMY PERALTA"
+    }
+   ]
+  },
+  {
+   "h": "16e1eb91c6ad33c890305bb74462d66c",
+   "n": "ECHEGARAY CERON ANDRES",
+   "a": [
+    {
+     "eq": "M40 24",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "07:00 - 15:30",
+     "op": "BARRIDO // ZONA BALANZA ATALAYA",
      "zo": "",
      "re": "",
      "em": "",
-     "jg": "T2 JIMMY PERALTA"
+     "jg": "T1 DANIEL GUIZADO"
     }
    ]
   },
@@ -582,13 +624,13 @@
    "n": "HUARHUA PARIHUAMAN DANY MANUEL",
    "a": [
     {
-     "eq": "L220H 207",
+     "eq": "L220H 204",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
-     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
-     "zo": "",
-     "re": "◆ CU 58",
-     "em": "",
+     "op": "M&D MEZCLA DE PB// ENCAPSULADO",
+     "zo": "MEZCLA AU",
+     "re": "◆ PB 90",
+     "em": "IMPALA",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -598,14 +640,40 @@
    "n": "CARRILLO ALBORNOZ FRANK",
    "a": [
     {
-     "eq": "M40 23",
+     "eq": "246D 02",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
-     "op": "BARRIDO // ZONA BALANZA ATALAYA",
-     "zo": "",
+     "op": "RECEPCION - PB",
+     "zo": "ENCAPSULADO",
      "re": "",
      "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
+    }
+   ]
+  },
+  {
+   "h": "a3c489585904eb159c813393c3b31070",
+   "n": "OLORTEGUI BLAS JHON MARIO",
+   "a": [
+    {
+     "eq": "L150H 111",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "19:00 - 23:00",
+     "op": "MARIATEGUI - TRASLADO EXTERNO",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T2 JIMMY PERALTA"
+    },
+    {
+     "eq": "246D 20",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "15:00 - 19:00",
+     "op": "M&D CONSOLIDADO PLOMO",
+     "zo": "ENCAPSULADO",
+     "re": "",
+     "em": "",
+     "jg": "T2 JIMMY PERALTA"
     }
    ]
   },
@@ -614,13 +682,13 @@
    "n": "HERRERA AGUILAR JUAN CARLOS JAYRO",
    "a": [
     {
-     "eq": "L150H 100",
+     "eq": "L150H 115",
      "tu": "TURNO 3 · NOCHE",
      "ho": "19:00 - 07:00",
-     "op": "MARIATEGUI - TRASLADO EXTERNO",
-     "zo": "",
+     "op": "MARIATEGUI - CONSOLIDADO",
+     "zo": "◆ MARIÁTEGUI",
      "re": "",
-     "em": "",
+     "em": "IMPALA",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -630,19 +698,9 @@
    "n": "LAGOS GONZALES RANDY JESUS",
    "a": [
     {
-     "eq": "L150H 100",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 19:00",
-     "op": "MARIATEGUI - RECEPCION",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T2 JIMMY PERALTA"
-    },
-    {
      "eq": "M40 22",
      "tu": "TURNO 2 · TARDE",
-     "ho": "19:00 - 23:00",
+     "ho": "15:00 - 23:30",
      "op": "BARRIDO // ZONA BALANZA ATALAYA",
      "zo": "",
      "re": "",
@@ -652,14 +710,30 @@
    ]
   },
   {
+   "h": "558c7895a4bd1e36d8d625ce3a788006",
+   "n": "ALEJANDREZ ALARCON MANUEL ALI",
+   "a": [
+    {
+     "eq": "246D 02",
+     "tu": "TURNO 1 · MAÑANA",
+     "ho": "7:00 - 15:30",
+     "op": "RECEPCION - PB",
+     "zo": "ENCAPSULADO",
+     "re": "",
+     "em": "",
+     "jg": "T1 DANIEL GUIZADO"
+    }
+   ]
+  },
+  {
    "h": "0adfd84e4836aa37da05fcd905677361",
    "n": "BARRIENTOS JUNCO RUBEN",
    "a": [
     {
-     "eq": "L150H 113",
+     "eq": "L150H 114",
      "tu": "TURNO 3 · NOCHE",
      "ho": "19:00 - 07:00",
-     "op": "M&D CONSOLIDADO GAMBETA",
+     "op": "M&D CONSOLIDADO PLOMO",
      "zo": "",
      "re": "",
      "em": "IMPALA",
@@ -672,13 +746,13 @@
    "n": "MONTENEGRO FIGUEROA ELBIN",
    "a": [
     {
-     "eq": "L150H 112",
+     "eq": "L220H 206",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "RECEPCION - PB",
-     "zo": "",
-     "re": "",
-     "em": "",
+     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
+     "zo": "MEZCLA ZINC",
+     "re": "◆ CU 58",
+     "em": "IMPALA",
      "jg": "T1 DANIEL GUIZADO"
     }
    ]
@@ -704,30 +778,14 @@
    "n": "LLATAS COLCHADO JOSE GABRIEL",
    "a": [
     {
-     "eq": "L220H 206",
+     "eq": "L220H 207",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
      "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
      "zo": "",
      "re": "◆ CU 58",
-     "em": "IMPALA",
-     "jg": "T3 LEONARDO ZAVALETA"
-    }
-   ]
-  },
-  {
-   "h": "8ef0839e83459579909a5417b55e3904",
-   "n": "HUANE NORABUENA ARNOLD ALEX",
-   "a": [
-    {
-     "eq": "246D 19",
-     "tu": "TURNO DÍA · 12H",
-     "ho": "07:00 - 19:00",
-     "op": "M&D CONSOLIDADO GAMBETA",
-     "zo": "",
-     "re": "",
      "em": "",
-     "jg": "T1 DANIEL GUIZADO"
+     "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
   },
@@ -736,10 +794,26 @@
    "n": "PACAYA GARCIA KEVIN",
    "a": [
     {
-     "eq": "M40 24",
+     "eq": "M40 23",
      "tu": "TURNO 3 · NOCHE",
      "ho": "23:00 - 07:00",
      "op": "BARRIDO // ZONA BALANZA ATALAYA",
+     "zo": "",
+     "re": "",
+     "em": "",
+     "jg": "T3 LEONARDO ZAVALETA"
+    }
+   ]
+  },
+  {
+   "h": "664448e112252493547b9ef974b789ce",
+   "n": "OLIVARES MARTINEZ JHONATAN RAUL",
+   "a": [
+    {
+     "eq": "M40 22",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "23:00 - 07:00",
+     "op": "DESCANSO",
      "zo": "",
      "re": "",
      "em": "",
@@ -752,30 +826,14 @@
    "n": "MALDONADO BALDEON ANGEL ALONSO",
    "a": [
     {
-     "eq": "L150H 113",
-     "tu": "TURNO DÍA · 12H",
-     "ho": "07:00 - 19:00",
-     "op": "M&D CONSOLIDADO GAMBETA",
+     "eq": "L220H 207",
+     "tu": "TURNO 2 · TARDE",
+     "ho": "15:00 - 23:30",
+     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
      "zo": "",
-     "re": "",
-     "em": "IMPALA",
-     "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "7dc253620fd2a5966a8b8626c232fc75",
-   "n": "CORAZON LOPEZ JAIR ALFONSO",
-   "a": [
-    {
-     "eq": "L150H 111",
-     "tu": "TURNO 1 · MAÑANA",
-     "ho": "07:00 - 15:30",
-     "op": "RECEPCIÓN - IMPORTACION",
-     "zo": "",
-     "re": "",
+     "re": "◆ CU 58",
      "em": "",
-     "jg": "T1 DANIEL GUIZADO"
+     "jg": "T2 JIMMY PERALTA"
     }
    ]
   },
@@ -784,11 +842,11 @@
    "n": "CONDORI CONDORI IRANNIO DAVID",
    "a": [
     {
-     "eq": "M40 23",
+     "eq": "246D 21",
      "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 23:30",
-     "op": "BARRIDO // ZONA BALANZA ATALAYA",
-     "zo": "",
+     "ho": "15:00 - 23:00",
+     "op": "MEZCLA// ZONA DE MEZCL 1",
+     "zo": "MEZCLA AU",
      "re": "",
      "em": "",
      "jg": "T2 JIMMY PERALTA"
@@ -800,13 +858,13 @@
    "n": "CHANCO MEDINA KEVIN BONCLAY",
    "a": [
     {
-     "eq": "246D 21",
+     "eq": "L150H 113",
      "tu": "TURNO 3 · NOCHE",
-     "ho": "23:00 - 07:00",
-     "op": "MEZCLA // ZONA DE MEZCLA 1",
-     "zo": "",
+     "ho": "19:00 - 07:00",
+     "op": "M&D CONSOLIDADO GAMBETA",
+     "zo": "CROSSDOCK. MILPO 2",
      "re": "",
-     "em": "",
+     "em": "IMPALA",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -816,13 +874,13 @@
    "n": "CHUQUILLANQUI ALIAGA LUIS FERNANDO",
    "a": [
     {
-     "eq": "L150H 114",
+     "eq": "246D 21",
      "tu": "TURNO 3 · NOCHE",
-     "ho": "19:00 - 07:00",
-     "op": "M&D CONSOLIDADO PLOMO",
-     "zo": "",
+     "ho": "23:00 - 07:00",
+     "op": "MEZCLA// ZONA DE MEZCL 1",
+     "zo": "MEZCLA AU",
      "re": "",
-     "em": "IMPALA",
+     "em": "",
      "jg": "T3 LEONARDO ZAVALETA"
     }
    ]
@@ -831,6 +889,16 @@
    "h": "9bceff59068c299bf439ea58623f2c0c",
    "n": "BONILLA VASQUEZ WILI NARDI",
    "a": [
+    {
+     "eq": "L220H 205",
+     "tu": "TURNO 3 · NOCHE",
+     "ho": "23:00 - 07:00",
+     "op": "M&D MEZCLA DE ZINC TRAF // ZONA MEZCLA ZINC",
+     "zo": "MEZCLA AU",
+     "re": "◆ CU 56",
+     "em": "IMPALA",
+     "jg": "T3 LEONARDO ZAVALETA"
+    },
     {
      "eq": "EMO",
      "tu": "TURNO 1 · MAÑANA",
@@ -848,40 +916,14 @@
    "n": "AMADO ALBORNOZ FRANCISCO NARCISO",
    "a": [
     {
-     "eq": "246D 21",
+     "eq": "L220H 207",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "MEZCLA",
+     "op": "M&D MEZCLA // ZONA DE MEZCLA 2",
      "zo": "",
-     "re": "",
+     "re": "◆ CU 58",
      "em": "",
      "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "052a48531b062ceee2099fe1417ee844",
-   "n": "GARCIA PEREZ FELIX ANIBAL",
-   "a": [
-    {
-     "eq": "246D 20",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 19:00",
-     "op": "M&D CONSOLIDADO PLOMO // ENCAPSULADO",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T2 JIMMY PERALTA"
-    },
-    {
-     "eq": "M40 21",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "19:00 - 23:00",
-     "op": "BARRIDO // ZONA BALANZA ATALAYA",
-     "zo": "",
-     "re": "",
-     "em": "",
-     "jg": "T2 JIMMY PERALTA"
     }
    ]
   },
@@ -890,30 +932,14 @@
    "n": "JORDAN UGARTE ALVARO",
    "a": [
     {
-     "eq": "M40 22",
+     "eq": "246D 23",
      "tu": "TURNO 1 · MAÑANA",
      "ho": "07:00 - 15:30",
-     "op": "BARRIDO METALES",
+     "op": "RECEPCIÓN - CAMIONES//CHARLY3",
      "zo": "",
      "re": "",
      "em": "",
      "jg": "T1 DANIEL GUIZADO"
-    }
-   ]
-  },
-  {
-   "h": "259361a0e0528aad01e7676a76965f18",
-   "n": "VENTURA REYES NEYSON CESAR",
-   "a": [
-    {
-     "eq": "L150H 110",
-     "tu": "TURNO 2 · TARDE",
-     "ho": "15:00 - 23:30",
-     "op": "RECEPCIÓN - COLISEO",
-     "zo": "",
-     "re": "",
-     "em": "IMPALA",
-     "jg": "T2 JIMMY PERALTA"
     }
    ]
   }
