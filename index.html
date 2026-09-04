@@ -42,7 +42,7 @@
       border-radius: 16px;
       box-shadow: 0 10px 25px -5px rgba(0, 30, 51, 0.08), 0 8px 10px -6px rgba(0, 30, 51, 0.04);
       padding: 32px 28px;
-      max-width: 460px;
+      max-width: 480px;
       width: 100%;
       border: 1px solid #e2e8f0;
       border-top: 5px solid var(--primary-purple);
@@ -82,10 +82,11 @@
       color: var(--teal-main);
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       padding: 6px 12px;
       border-radius: 999px;
       margin-bottom: 20px;
+      line-height: 1.4;
     }
 
     label {
@@ -137,8 +138,36 @@
     .persona-sub {
       font-size: 0.78rem;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       font-weight: 600;
+    }
+
+    .dia-bloque {
+      margin-bottom: 18px;
+    }
+
+    .dia-bloque:last-child { margin-bottom: 0; }
+
+    .dia-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-left: 2px;
+    }
+
+    .dia-header .dia-fecha {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--dark-navy);
+    }
+
+    .dia-header .dia-nombre {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .asignacion {
@@ -146,7 +175,7 @@
       border-radius: 12px;
       background-color: var(--bg-result);
       border-left: 5px solid var(--teal-main);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       animation: fadeIn 0.25s ease-in-out;
     }
 
@@ -274,10 +303,15 @@
       .then(data => {
         dataset = data;
         const m = data.meta || {};
+        const rango = m.rango || {};
+        const rangoTxt = (rango.desde && rango.hasta)
+          ? (rango.desde === rango.hasta ? rango.desde : rango.desde + ' al ' + rango.hasta)
+          : '—';
         document.getElementById('fechaChip').textContent =
-          'Programación del ' + (m.fecha || '—') + (m.dia ? ' · ' + m.dia : '');
+          'Programación cargada: ' + rangoTxt +
+          ' · ' + (m.dias_cargados || (data.dias || []).length || 0) + ' día(s)';
         document.getElementById('footerMeta').textContent =
-          'Actualizado ' + (m.generado || '—') + ' · ' + (m.operadores || 0) + ' operadores programados';
+          'Actualizado ' + (m.generado || '—') + ' · ' + (m.operadores_totales || 0) + ' operadores con asignación';
       })
       .catch(err => {
         cargaError = true;
@@ -317,6 +351,21 @@
       caja.style.display = html ? 'block' : 'none';
     }
 
+    // Busca un DNI (por su huella) en todos los días cargados.
+    // Devuelve { nombre, dias: [{fecha, diaSemana, asignaciones}] } o null.
+    function buscarPersona(h) {
+      let nombre = null;
+      const dias = [];
+      (dataset.dias || []).forEach(d => {
+        const op = (d.operadores || []).find(o => o.h === h);
+        if (op) {
+          nombre = op.n;
+          dias.push({ fecha: d.fecha, diaSemana: d.dia, asignaciones: op.a });
+        }
+      });
+      return nombre ? { nombre, dias } : null;
+    }
+
     const input = document.getElementById('searchInput');
     let consultaActiva = 0;
 
@@ -338,33 +387,43 @@
       const h = await huella(dni);
       if (id !== consultaActiva) return; // llegó una consulta más nueva
 
-      const persona = dataset.operadores.find(o => o.h === h);
+      const persona = buscarPersona(h);
+      const rango = (dataset.meta || {}).rango || {};
+      const rangoTxt = (rango.desde && rango.hasta)
+        ? (rango.desde === rango.hasta ? 'el ' + rango.desde : 'del ' + rango.desde + ' al ' + rango.hasta)
+        : 'la programación cargada';
 
       if (!persona) {
-        pintar('<div class="aviso">No figura una asignación para este DNI en la programación del ' +
-               esc((dataset.meta || {}).fecha || 'día') +
+        pintar('<div class="aviso">No figura una asignación para este DNI en ' + esc(rangoTxt) +
                '. Verifique el número o consulte con su Jefe de Guardia.</div>');
         return;
       }
 
-      const n = persona.a.length;
-      let html = '<div class="persona">' + esc(persona.n) + '</div>' +
-                 '<div class="persona-sub">' +
-                 (n === 1 ? '1 asignación programada' : n + ' asignaciones programadas') +
-                 '</div>';
+      let html = '<div class="persona">' + esc(persona.nombre) + '</div>' +
+                 '<div class="persona-sub">Asignaciones en ' + esc(rangoTxt) + '</div>';
 
-      persona.a.forEach(a => {
-        html += '<div class="asignacion">' +
-          '<div class="turno-linea">' +
-            '<span class="turno-nombre">' + esc(a.tu) + '</span>' +
-            '<span class="turno-horario">' + esc(a.ho) + '</span>' +
-          '</div>' +
-          fila('Equipo asignado', a.eq + (a.em ? ' · ' + a.em : '')) +
-          fila('Operación asignada', a.op) +
-          fila('Zona', a.zo) +
-          fila('Referencia', a.re) +
-          fila('Jefe de guardia', a.jg) +
-        '</div>';
+      persona.dias.forEach(d => {
+        html += '<div class="dia-bloque">' +
+          '<div class="dia-header">' +
+            '<span class="dia-fecha">' + esc(d.fecha) + '</span>' +
+            '<span class="dia-nombre">' + esc(d.diaSemana) + '</span>' +
+          '</div>';
+
+        d.asignaciones.forEach(a => {
+          html += '<div class="asignacion">' +
+            '<div class="turno-linea">' +
+              '<span class="turno-nombre">' + esc(a.tu) + '</span>' +
+              '<span class="turno-horario">' + esc(a.ho) + '</span>' +
+            '</div>' +
+            fila('Equipo asignado', a.eq + (a.em ? ' · ' + a.em : '')) +
+            fila('Operación asignada', a.op) +
+            fila('Zona', a.zo) +
+            fila('Referencia', a.re) +
+            fila('Jefe de guardia', a.jg) +
+          '</div>';
+        });
+
+        html += '</div>';
       });
 
       pintar(html);
